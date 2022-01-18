@@ -1,41 +1,24 @@
-import { findByLabelText } from '@testing-library/react';
-import React, { Fragment } from 'react';
+import React from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+import CartWidget from './CartWidget';
 
 
 const NavBar = () => {
-    const myStyle = {
-        fontSize: 25,
-    }
 
-    const imgStyle = {
-        width: 150,
-        height: "auto"
-    }
-
-    return <Fragment>
-        <nav style={myStyle} class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-            <img style={imgStyle} src="pure.jpg" alt="" />
-                <a class="navbar-brand" href="#">PURE - SkinCare</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Tips</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Carrito</a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-            </nav>
-            </Fragment>
+    return <>
+        <Navbar expand= "lg" variant="light">
+            <Container>
+                <Navbar.Brand href="#home"><img className= "miLogo" src="pure.jpg" alt="" /></Navbar.Brand>
+                <Nav className="me-auto" className="miNav">
+                    <Nav.Link className="links" href="#home">Productos</Nav.Link>
+                    <Nav.Link className="links" href="#features">Tips</Nav.Link>
+                    <Nav.Link className="links" href="#pricing"> <CartWidget /> </Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
+        </>            
 }
 
 export default NavBar;

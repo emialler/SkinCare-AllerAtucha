@@ -1,24 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import ItemsListContainer from './components/ItemListContainer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
+      <header>
       <NavBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Tienda de SkinCare
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          SkinCare
-        </a>
+      <ItemsListContainer />
       </header>
     </div>
   );
