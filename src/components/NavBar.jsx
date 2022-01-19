@@ -11,7 +11,7 @@ const NavBar = () => {
         <Navbar expand= "lg" variant="light">
             <Container>
                 <Navbar.Brand href="#home"><img className= "miLogo" src="pure.jpg" alt="" /></Navbar.Brand>
-                <Nav className="me-auto" className="miNav">
+                <Nav className="me-auto miNav">
                     <Nav.Link className="links" href="#home">Productos</Nav.Link>
                     <Nav.Link className="links" href="#features">Tips</Nav.Link>
                     <Nav.Link className="links" href="#pricing"> <CartWidget /> </Nav.Link>

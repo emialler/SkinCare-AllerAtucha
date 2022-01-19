@@ -19,3 +19,13 @@
 .cartWidget {
   font-size: 2rem;
 }
+
+.contador {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.stock {
+  padding: 0 20px;
+}
