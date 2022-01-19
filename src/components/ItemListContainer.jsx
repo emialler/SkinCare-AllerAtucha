@@ -4,7 +4,7 @@ import ItemCount from './ItemCount';
 const ItemsListContainer = () => {
     return <>
         <h2>Este va a ser un catálogo</h2>
-        <ItemCount />
+        <ItemCount stock="10" producto="Crema Facial"/>
         </>
     
 }

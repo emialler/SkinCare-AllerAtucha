@@ -2,13 +2,12 @@ import React from 'react';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 
-const ItemCount = () => {
+const ItemCount = (props) => {
 
     const [items, setItems] = useState(1);
-    const stock = 10;
 
     function setRealStock(itemQty) {
-        if (itemQty <= stock) {
+        if (itemQty <= props.stock) {
             setItems(itemQty)
         } 
     }
@@ -20,7 +19,7 @@ const ItemCount = () => {
     }
 
     return <>
-    <h4>Crema Facial</h4>
+    <h4>{props.producto}</h4>
     <div className='contador'>
         <Button variant="outline-dark" size="lg" onClick={ () => removeFromStock(items - 1)}>-</Button>
         <h3 className='stock'>{items}</h3>
