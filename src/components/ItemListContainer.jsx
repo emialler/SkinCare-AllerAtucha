@@ -1,10 +1,12 @@
 import React from 'react';
 import ItemCount from './ItemCount';
+import ItemList from './ItemList';
 
 const ItemsListContainer = () => {
     return <>
-        <h2>Este va a ser un catálogo</h2>
+        <h2>Productos Faciales</h2>
         <ItemCount stock="10" producto="Crema Facial"/>
+        <ItemList />
         </>
     
 }
