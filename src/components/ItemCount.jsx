@@ -19,10 +19,9 @@ const ItemCount = (props) => {
     }
 
     return <>
-    <h4>{props.producto}</h4>
-    <div className='contador'>
+    <div style={{display: "flex", justifyContent: "center", margin: "20px"}}>
         <Button variant="outline-dark" size="lg" onClick={ () => removeFromStock(items - 1)}>-</Button>
-        <h3 className='stock'>{items}</h3>
+        <h3 style={{padding: "0 20px"}}>{items}</h3>
         <Button variant="outline-dark" size="lg" onClick={ () => setRealStock(items + 1)}>+</Button>
     </div>
     <Button variant="dark">Agregar al carrito</Button>

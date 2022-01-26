@@ -10,8 +10,8 @@ const NavBar = () => {
     return <>
         <Navbar expand= "lg" variant="light">
             <Container>
-                <Navbar.Brand href="#home"><img className= "miLogo" src="pure.jpg" alt="" /></Navbar.Brand>
-                <Nav className="me-auto miNav">
+                <Navbar.Brand href="#home"><img style={{height: "150px", width: "auto"}} src="pure.jpg" alt="" /></Navbar.Brand>
+                <Nav className="me-auto" style={{width: "100%", fontSize: "1.8rem"}}>
                     <Nav.Link className="links" href="#home">Productos</Nav.Link>
                     <Nav.Link className="links" href="#features">Tips</Nav.Link>
                     <Nav.Link className="links" href="#pricing"> <CartWidget /> </Nav.Link>

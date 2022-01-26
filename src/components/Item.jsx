@@ -1,40 +1,28 @@
-import { Button, Card, ListGroup } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
+import ItemCount from "./ItemCount";
 
-const products = [
-    {"name": "Crema Facial de día",
-    "id": 1,
-    "description": "Crema hidratante de día con FPS 25",
-    "price": 950,
-    "image": "../public/crema.jpg"},
 
-    {"name": "Crema Facial de noche",
-    "id": 2,
-    "description": "Crema hidratante de noche",
-    "price": 1150,
-    "image": "../public/crema2.jpg"}
-]
+const Item = ({item}) => {
 
-const Item = () => {
+    const {id, title, price, pictureUrl } = item
 
-        return (
-            <Card >
-            <Card.Img src={products.image} />
-            <Card.Body>
-                <Card.Text>
-                {products.name}
-                </Card.Text>
-                <Card.Title>
-                ${products.price}
-                </Card.Title>          
-            </Card.Body>              
-            <Card.Header>Detalles</Card.Header> 
-            <ListGroup variant="flush">
-                    {products.description}
-                </ListGroup>                       
-            <Button variant="primary" style={{margin: "0 45%"}}>Ver detalle</Button>                
-        </Card> 
-        )
-     
+    return (
+        <div>
+            <Card>
+                <Card.Img src={pictureUrl} style={{ marginTop: 10, height: '110px', with: "100%", objectFit: "contain" }} variant="top" />
+                <Card.Body style={{ textAlign: "left" }}>
+                    <Card.Text style={{ height: 40 }}>
+                        {title}
+                    </Card.Text>
+                    <Card.Title>
+                        ${price}
+                    </Card.Title>          
+                </Card.Body>                         
+                <Button>Ver detalles</Button> 
+                <ItemCount stock="10" />              
+            </Card>
+        </div>
+    )
 }
 
 export default Item;

@@ -2,30 +2,6 @@
   text-align: center;
 }
 
-.miNav {
-  width: 100%;
-  font-size: 1.8rem;
-}
-
 .links {
   width: 30%;
-}
-
-.miLogo {
-  height: 150px;
-  width: auto;
-}
-
-.cartWidget {
-  font-size: 2rem;
-}
-
-.contador {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-.stock {
-  padding: 0 20px;
 }

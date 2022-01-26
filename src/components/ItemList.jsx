@@ -1,13 +1,13 @@
 import Item from "./Item";
-import { Col } from "react-bootstrap"; 
+import { Col  } from "react-bootstrap";
 
-const ItemList = ({products}) => {
-
+const ItemList = ({items}) => {
+    
     return (
         <>
-        {products.map((product) => (
+        {items.map((item) => (
             <Col>
-                <Item  />
+                <Item item={item} />
             </Col>
         ))}
     </>
