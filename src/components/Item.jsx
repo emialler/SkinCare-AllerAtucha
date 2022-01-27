@@ -11,10 +11,10 @@ const Item = ({item}) => {
             <Card>
                 <Card.Img src={pictureUrl} style={{ marginTop: 10, height: '110px', with: "100%", objectFit: "contain" }} variant="top" />
                 <Card.Body style={{ textAlign: "left" }}>
-                    <Card.Text style={{ height: 40 }}>
+                    <Card.Text style={{ height: 40, textAlign: "center"}}>
                         {title}
                     </Card.Text>
-                    <Card.Title>
+                    <Card.Title style={{ textAlign: "center"}}>
                         ${price}
                     </Card.Title>          
                 </Card.Body>                         
